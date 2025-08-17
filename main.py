@@ -54,8 +54,8 @@ def calcular_precio_con_comision(precio_venta_con_iva):
 
 def calcular_precio_con_cuatropormil(precio, tiene_comision):
 
-    respuesta = input("\n\t¿Desea agregar el 4x1000 a esta venta?\n\t    1. Sí\n\t    2. No\n\n\t\t--> :  ")
-    if respuesta == "1":
+    opcion_cuatropormil = input("\n\t¿Desea agregar el 4x1000 a esta venta?\n\t    1. Sí\n\t    2. No\n\n\t\t--> :  ")
+    if opcion_cuatropormil == "1":
         precio_con_cuatropormil = precio * 1.004
 
         if tiene_comision:
@@ -63,7 +63,7 @@ def calcular_precio_con_cuatropormil(precio, tiene_comision):
         else:
             print(f"\n\n🏦--> Con IVA del 19% + 4x1000: ${precio_con_cuatropormil:,.0f} COP")
         print("=================================================\n")
-    elif respuesta == "2":
+    elif opcion_cuatropormil == "2":
         return
     else:
         print("\nOpción no válida, por favor ingresa 1 o 2.\n")
@@ -73,10 +73,10 @@ def calcular_precio_con_cuatropormil(precio, tiene_comision):
 
 
 def otra_consulta():
-    respuesta = input("¿Deseas hacer otra consulta?\n1. Sí\n2. No\n\n\t--> :  ")
-    if respuesta == "1":
+    repetir_consulta = input("¿Deseas hacer otra consulta?\n1. Sí\n2. No\n\n\t--> :  ")
+    if repetir_consulta == "1":
         return True
-    elif respuesta == "2":
+    elif repetir_consulta == "2":
         return False
     else:
         print("\nOpción no válida, por favor ingresa 1 o 2.\n")
