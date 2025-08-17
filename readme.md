@@ -21,6 +21,7 @@ Una herramienta sencilla y precisa para ayudarte a determinar el precio de venta
 
 ## Diagrama de Flujo
 
+```mermaid
 graph TD
     A[Inicio] --> B{Solicitar precio base};
     B --> C{Es válido?};
@@ -38,3 +39,4 @@ graph TD
     J --> K{¿Otra consulta?};
     K -- Sí --> A;
     K -- No --> L[Fin];
+```
