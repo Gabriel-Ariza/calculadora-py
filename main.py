@@ -14,6 +14,8 @@ def obtener_precio():
 def calcular_precio_venta():
     precio_venta_base = obtener_precio()
     precio_con_iva = precio_venta_base * 1.19
+    iva = precio_venta_base * 0.19
+    print(f"IVA: ${iva:,.0f} COP")
     print(f"\n\n💰--> Con IVA del 19% lo venderías en: ${precio_con_iva:,.0f} COP")
     print("=================================================")
 
