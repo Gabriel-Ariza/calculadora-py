@@ -17,3 +17,24 @@ Una herramienta sencilla y precisa para ayudarte a determinar el precio de venta
 
 * ### **Es fácil de usar**
   Sólo sigue las instrucciones en pantalla.
+
+
+## Diagrama de Flujo
+
+graph TD
+    A[Inicio] --> B{Solicitar precio base};
+    B --> C{Es válido?};
+    C -- No --> B;
+    C -- Sí --> D[Calcular precio con 19% IVA];
+    D --> E{¿Usar datáfono?};
+    E -- Sí (3%) --> F[Calcular con 3% de comisión];
+    E -- Sí (3.5%) --> G[Calcular con 3.5% de comisión];
+    E -- No --> H{¿Agregar 4x1000?};
+    F --> H;
+    G --> H;
+    H -- Sí --> I[Calcular con 0.4% del 4x1000];
+    H -- No --> J[Mostrar precio final];
+    I --> J;
+    J --> K{¿Otra consulta?};
+    K -- Sí --> A;
+    K -- No --> L[Fin];
